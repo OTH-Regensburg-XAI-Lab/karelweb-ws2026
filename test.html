@@ -1,43 +1,61 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Karel Studio Integrations- und Testseite."
+      id="page-description"
+      data-i18n-key="testlab.description"
+      content="Create and try Karel worlds."
     />
-    <title>Karel Studio · Testlabor</title>
-    <script type="module" crossorigin src="/assets/test-ZEtF24PH.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/dist-cO78BjzP.js">
-    <link rel="modulepreload" crossorigin href="/assets/codemirror-6-adapter-CRth9zTh.js">
-    <link rel="stylesheet" crossorigin href="/assets/test-B2huIYVU.css">
+    <title data-i18n-key="testlab.title">Karel Studio · World Editor</title>
+    <script type="module" crossorigin src="/karelweb-ws2026/assets/test-CT8TjH5n.js"></script>
+    <link rel="modulepreload" crossorigin href="/karelweb-ws2026/assets/codemirror-6-adapter-g6jAGw4_.js">
+    <link rel="stylesheet" crossorigin href="/karelweb-ws2026/assets/test-DRPn5hLC.css">
   </head>
   <body>
     <main class="page-shell">
       <header class="site-header">
         <div>
-          <p class="kicker">Testlabor</p>
           <h1>Karel Studio</h1>
         </div>
         <div class="header-copy">
-          <p class="lede">
-            Fixtures, Welteditor, JSON-Austausch und Entwicklerdaten.
-          </p>
-          <a class="text-link" href="/">Zur Programmieransicht</a>
+          <a
+            class="text-link"
+            href="/karelweb-ws2026/"
+            data-i18n-key="testlab.backToEditor"
+            >Program</a
+          >
         </div>
       </header>
       <karel-runner name="answer" test-mode></karel-runner>
-      <section class="lab-tools" aria-label="Testwerkzeuge">
-        <h2>Fixtures</h2>
-        <label
-          >Fixture
+      <section class="lab-tools" aria-labelledby="examples-title">
+        <h2 id="examples-title" data-i18n-key="testlab.fixtures">Examples</h2>
+        <div class="fixture-picker">
+          <label for="fixture" data-i18n-key="testlab.fixtureLabel"
+            >Example</label
+          >
           <select id="fixture">
-            <option value="">Fixture wählen …</option>
-          </select></label
+            <option value="" data-i18n-key="testlab.chooseFixture">
+              Choose an example …
+            </option>
+          </select>
+        </div>
+        <button
+          id="load-fixture"
+          type="button"
+          data-i18n-key="testlab.loadFixture"
         >
-        <button id="load-fixture" type="button">Laden</button>
-        <button id="discard-plan" type="button">Ausführung verwerfen</button>
+          Load
+        </button>
+        <button
+          id="discard-plan"
+          type="button"
+          data-i18n-key="testlab.discardPlan"
+        >
+          Discard run
+        </button>
         <p id="lab-message" aria-live="polite"></p>
       </section>
       <section
@@ -45,12 +63,9 @@
         aria-labelledby="world-editor-title"
       >
         <div class="section-heading">
-          <p class="kicker">Tiled-artiger Editor</p>
-          <h2 id="world-editor-title">Ausgangswelt gestalten</h2>
-          <p class="lede">
-            Karel, Beeper und Wände direkt zeichnen; Änderungen werden in den
-            Runner übernommen.
-          </p>
+          <h2 id="world-editor-title" data-i18n-key="testlab.editorTitle">
+            Starting world
+          </h2>
         </div>
         <karel-world-editor></karel-world-editor>
       </section>
