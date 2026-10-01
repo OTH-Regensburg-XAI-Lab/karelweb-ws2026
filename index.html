@@ -10,22 +10,8 @@
       content="Check and visually run C-like Base Karel programs."
     />
     <title data-i18n-key="app.title">Karel Studio</title>
-    <link rel="stylesheet" href="/karelweb-ws2026/assets/site-footer.css" />
-    <script
-      type="module"
-      crossorigin
-      src="/karelweb-ws2026/assets/main-en-0a0bfb6aa4.js"
-    ></script>
-    <link
-      rel="modulepreload"
-      crossorigin
-      href="/karelweb-ws2026/assets/codemirror-6-adapter-en-0a0bfb6aa4.js"
-    />
-    <link
-      rel="stylesheet"
-      crossorigin
-      href="/karelweb-ws2026/assets/main-BJYLSEW4.css"
-    />
+    <script type="module" crossorigin src="/karelweb-ws2026/assets/main-CzurJ1mP.js"></script>
+    <link rel="stylesheet" crossorigin href="/karelweb-ws2026/assets/main-ia0c-JxJ.css">
   </head>
   <body>
     <main class="page-shell">
@@ -34,32 +20,40 @@
           <h1>Karel Studio</h1>
         </div>
         <div class="header-copy">
-          <a
-            class="text-link"
-            id="world-editor-link"
-            href="/karelweb-ws2026/test.html"
-            data-i18n-key="standalone.openWorldEditor"
-            >World Editor</a
-          >
+          
         </div>
       </header>
+      <div class="world-import">
+        <button id="load-world" type="button" data-i18n-key="we.file.load">
+          Load world …
+        </button>
+        <input
+          id="world-file"
+          type="file"
+          accept=".json,application/json"
+          aria-label="Choose a world file"
+          hidden
+        />
+        <p id="world-import-status" role="status" aria-live="polite"></p>
+      </div>
       <karel-runner name="answer"></karel-runner>
     </main>
     <footer class="site-footer">
-      <p>2026 OTH Regensburg, Project ADKI, XAI Lab</p>
-      <nav aria-label="Project links">
-        <a
-          href="https://informatik-mathematik.oth-regensburg.de/personen/detailansicht/stephan-scheele"
-          >Prof. Dr. Stephan Scheele</a
-        >
-        <a
-          href="https://www.oth-regensburg.de/personen/detailansicht/titus-dose"
-          >Prof. Dr. Titus Dose</a
-        >
-        <a href="/karelweb-ws2026/THIRD_PARTY_NOTICES.txt"
-          >Third-party licenses</a
-        >
-      </nav>
-    </footer>
+  <p>2026 OTH Regensburg, Project ADKI, XAI Lab</p>
+  <div class="footer-links">
+    <a
+      href="https://informatik-mathematik.oth-regensburg.de/personen/detailansicht/stephan-scheele"
+      >Prof. Dr. Stephan Scheele</a
+    >
+    <a href="https://www.oth-regensburg.de/personen/detailansicht/titus-dose"
+      >Prof. Dr. Titus Dose</a
+    >
+    <a
+      href="https://oth-regensburg-xai-lab.github.io/karelweb-ws2026/THIRD_PARTY_NOTICES.txt"
+      >Third-party licenses</a
+    >
+  </div>
+</footer>
+
   </body>
 </html>
