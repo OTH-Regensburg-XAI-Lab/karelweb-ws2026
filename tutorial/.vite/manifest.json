@@ -1,0 +1,23 @@
+{
+  "../../packages/application/dist/local-execution-backend.js": {
+    "file": "assets/local-execution-backend-B69ODKlF.js",
+    "name": "local-execution-backend",
+    "src": "../../packages/application/dist/local-execution-backend.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ]
+  },
+  "index.html": {
+    "file": "assets/index-DLcxrC41.js",
+    "name": "index",
+    "src": "index.html",
+    "isEntry": true,
+    "dynamicImports": [
+      "../../packages/application/dist/local-execution-backend.js"
+    ],
+    "css": [
+      "assets/index-D74K8tmT.css"
+    ]
+  }
+}

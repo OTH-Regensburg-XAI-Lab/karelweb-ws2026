@@ -1,0 +1,40 @@
+{
+  "introduction": "The destination is now beyond a corner. Read the corridor first: decide where movement ends and the change of direction begins.",
+  "explanation": "turnLeft(); rotates Karel 90 degrees counterclockwise without moving it. Facing east, a left turn points north. Walls block movement, so commands must follow the corridor in the right order.",
+  "objective": "Follow the corridor from (1, 1) to the beeper at (5, 4). Turn left at (5, 1), finish facing north, and leave the beeper on the ground.",
+  "instruction": "Use move(); and turnLeft(); to navigate the lower corridor and then the right-hand corridor. Write the complete route inside main.",
+  "commands": [
+    {
+      "code": "turnLeft();",
+      "description": "Turn left on the spot."
+    },
+    {
+      "code": "move();",
+      "description": "Move in the new direction."
+    }
+  ],
+  "hints": [
+    "Follow the lower edge to avenue 5 before turning. The north-facing wall prevents an earlier turn.",
+    "The corner is (5, 1). turnLeft(); changes the direction there but does not advance to the next square.",
+    "The route has four forward steps, one left turn, then three forward steps."
+  ],
+  "illustration": {
+    "src": "images/turn-left.png",
+    "alt": "Before: Karel stands on a square facing east. After turnLeft(); it stands on the same square facing north. A left turn changes direction by 90 degrees.",
+    "caption": "A left turn changes the direction, not the position.",
+    "width": 1774,
+    "height": 887
+  },
+  "version": 1,
+  "id": "02-around-the-corner",
+  "revision": 2,
+  "title": "Around the corner",
+  "sourcePath": "starter.karel",
+  "gradingPath": "grading.json",
+  "cases": [
+    {
+      "id": "default",
+      "label": "L-shaped corridor"
+    }
+  ]
+}

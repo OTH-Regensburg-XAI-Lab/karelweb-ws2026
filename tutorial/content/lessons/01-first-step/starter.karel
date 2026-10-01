@@ -1,0 +1,3 @@
+int main() {
+    // Reach the beeper in three forward steps.
+}

@@ -1,0 +1,25 @@
+{
+  "format": "karel-grading",
+  "version": 1,
+  "problemId": "01-first-step",
+  "languageProfile": "base-karel-c-v2",
+  "limits": {
+    "maxSourceBytes": 16384,
+    "maxAstNodes": 5000,
+    "maxInstructionsPerTest": 10000,
+    "maxVisibleActionsPerTest": 500,
+    "deadlineMsPerTest": 1000
+  },
+  "tests": [
+    {
+      "id": "default",
+      "visibility": "public",
+      "weight": 100,
+      "initialWorldPath": "worlds/default.initial.json",
+      "goal": {
+        "kind": "exactWorld",
+        "targetWorldPath": "worlds/default.target.json"
+      }
+    }
+  ]
+}

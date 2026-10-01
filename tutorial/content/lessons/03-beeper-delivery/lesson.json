@@ -1,0 +1,40 @@
+{
+  "introduction": "Use the same route to transport an object. Picking up, carrying and placing a beeper makes command order part of the result.",
+  "explanation": "pickBeeper(); transfers one beeper from Karel’s current square into its bag. putBeeper(); transfers one from the bag onto the current square. Neither command moves Karel. Picking up requires a beeper on the square; putting down requires one in the bag.",
+  "objective": "Collect the beeper at (2, 1), carry it through the corridor, and put it down at (5, 4). Finish there facing north with an empty bag.",
+  "instruction": "Start at (1, 1) with an empty bag. Follow the corridor using one left turn at (5, 1). The destination starts empty: deliver the only beeper there.",
+  "commands": [
+    {
+      "code": "pickBeeper();",
+      "description": "Take one beeper from this square."
+    },
+    {
+      "code": "putBeeper();",
+      "description": "Place one beeper on this square."
+    }
+  ],
+  "hints": [
+    "First move onto the square with the beeper. Pick it up before continuing down the corridor.",
+    "Carry it to the corner, turn left once, and follow the right-hand corridor to street 4. Moving does not change the bag’s contents.",
+    "After move(); and pickBeeper();, three more moves reach the corner. Turn left, move three times, then use putBeeper();."
+  ],
+  "illustration": {
+    "src": "images/beeper-coins.png",
+    "alt": "Two before-and-after pairs show gold coin beepers. pickBeeper(); removes the coin from Karel’s square and changes Bag: 0 to Bag: 1. putBeeper(); places the coin on the square and changes Bag: 1 to Bag: 0. Karel does not move or turn.",
+    "caption": "One coin is one beeper. Pick up here, carry it, put it down there.",
+    "width": 1774,
+    "height": 887
+  },
+  "version": 1,
+  "id": "03-beeper-delivery",
+  "revision": 1,
+  "title": "Beeper delivery",
+  "sourcePath": "starter.karel",
+  "gradingPath": "grading.json",
+  "cases": [
+    {
+      "id": "default",
+      "label": "L-shaped corridor"
+    }
+  ]
+}

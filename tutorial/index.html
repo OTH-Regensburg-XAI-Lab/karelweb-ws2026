@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#174c3c" />
+    <meta
+      name="description"
+      content="Learn to code, one small step at a time. A hands-on introduction to Karel with three guided lessons."
+    />
+    <title>Karel — First steps</title>
+    <script type="module" crossorigin src="/karelweb-ws2026/tutorial/assets/index-DLcxrC41.js"></script>
+    <link rel="stylesheet" crossorigin href="/karelweb-ws2026/tutorial/assets/index-D74K8tmT.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#lesson-title">Skip to lesson</a>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Karel tutorial home"
+        ><span class="brand-mark" aria-hidden="true">k.</span
+        ><span
+          >Karel<span class="brand-divider">/</span
+          ><span class="brand-subtitle">learn by doing</span></span
+        ></a
+      >
+      <span class="edition"
+        >FIRST STEPS
+        <span class="edition-dot" aria-hidden="true"></span> 3-LESSON
+        PREVIEW</span
+      >
+    </header>
+    <div class="layout">
+      <aside class="sidebar" aria-label="Course progress">
+        <p class="eyebrow">YOUR LEARNING PATH</p>
+        <h2>Programming<br />starts with a plan.</h2>
+        <p class="sidebar-description">
+          Read the world. Plan the route.<br />Test your instructions.
+        </p>
+        <div class="course-progress">
+          <div>
+            <span id="progress-label">0 of 3 completed</span
+            ><span id="progress-percent">0%</span>
+          </div>
+          <progress
+            id="progress-bar"
+            max="3"
+            value="0"
+            aria-label="Completed lessons"
+          ></progress>
+        </div>
+        <nav id="lesson-nav" aria-label="Lessons"></nav>
+        <div class="sidebar-note">
+          <span aria-hidden="true">✦</span>
+          <p>Your code and progress are saved in this browser.</p>
+        </div>
+        <button
+          class="text-button reset-progress"
+          id="reset-progress"
+          type="button"
+        >
+          Reset progress
+        </button>
+      </aside>
+      <main id="main">
+        <div id="storage-notice" class="notice" role="status" hidden></div>
+        <div id="revision-notice" class="notice" role="status" hidden>
+          Some completed tasks have changed. Your code is preserved; solve the
+          updated tasks to unlock the next lessons again.
+        </div>
+        <div id="loading" class="loading" role="status">
+          Getting your lesson ready…
+        </div>
+        <div id="load-error" class="load-error" role="alert" hidden>
+          <h1>Let's try that again.</h1>
+          <p id="load-error-message"></p>
+          <button id="retry" class="primary-button" type="button">
+            Reload lesson
+          </button>
+        </div>
+        <article id="lesson" hidden>
+          <div class="lesson-heading">
+            <p class="eyebrow" id="lesson-number"></p>
+            <span class="lesson-meta"
+              >BEGINNER <span aria-hidden="true">·</span> 3–5 MIN</span
+            >
+          </div>
+          <h1 id="lesson-title" tabindex="-1"></h1>
+          <p class="introduction" id="introduction"></p>
+          <section class="explanation-card" aria-labelledby="new-command-title">
+            <div class="explanation-copy">
+              <span class="section-step"
+                >01 <span>GET TO KNOW THE COMMAND</span></span
+              >
+              <h2 id="new-command-title">
+                Small instruction.<br />
+                Visible change.
+              </h2>
+              <p id="explanation"></p>
+              <div id="commands" class="commands"></div>
+            </div>
+            <figure>
+              <img id="illustration" alt="" />
+              <figcaption id="illustration-caption"></figcaption>
+            </figure>
+          </section>
+          <section class="practice" aria-labelledby="practice-title">
+            <div class="practice-heading">
+              <div>
+                <span class="section-step">02 <span>YOUR TURN</span></span>
+                <h2 id="practice-title">Let's put it into practice.</h2>
+              </div>
+              <span class="practice-label">PRACTICE WORLD</span>
+            </div>
+            <div class="objective">
+              <span class="goal-symbol" aria-hidden="true">◎</span>
+              <div>
+                <strong>Your goal</strong>
+                <p id="objective"></p>
+              </div>
+              <span class="coordinate-note">(avenue, street)</span>
+            </div>
+            <p class="instruction" id="instruction"></p>
+            <div id="runner-mount"></div>
+            <div class="practice-actions">
+              <button class="text-button" id="reset-world" type="button">
+                ↺ Reset world</button
+              ><button class="text-button" id="reset-code" type="button">
+                Restore starter code</button
+              ><span>Try it with Compile → Next action.</span>
+            </div>
+            <div class="check-bar">
+              <div id="feedback" role="status" aria-live="polite">
+                <strong>Ready when you are.</strong>
+                <p>Check your solution to complete this lesson.</p>
+              </div>
+              <div class="check-actions">
+                <button
+                  id="cancel-check"
+                  class="secondary-button"
+                  type="button"
+                  hidden
+                >
+                  Cancel check</button
+                ><button id="check" class="primary-button" type="button">
+                  Check solution <span aria-hidden="true">→</span>
+                </button>
+              </div>
+            </div>
+          </section>
+          <div class="lesson-bottom">
+            <details class="hints">
+              <summary><span aria-hidden="true">✧</span> Need a hint?</summary>
+              <div id="hints"></div>
+            </details>
+            <button id="next" class="next-button" type="button" disabled>
+              Next lesson <span aria-hidden="true">→</span>
+            </button>
+          </div>
+          <section
+            id="completion"
+            class="completion"
+            aria-labelledby="completion-title"
+            hidden
+          >
+            <span class="eyebrow">THREE TASKS. ONE FOUNDATION.</span>
+            <h2 id="completion-title">You can plan and execute a route.</h2>
+            <p>
+              You can navigate a corridor, turn left, and transport a beeper.
+              You have completed all three lessons in this preview. Revisit any
+              lesson to test another solution.
+            </p>
+            <button id="revisit" class="secondary-button" type="button">
+              Back to lesson 1
+            </button>
+          </section>
+        </article>
+        <footer class="site-footer">
+  <p>2026 OTH Regensburg, Project ADKI, XAI Lab</p>
+  <div class="footer-links">
+    <a
+      href="https://informatik-mathematik.oth-regensburg.de/personen/detailansicht/stephan-scheele"
+      >Prof. Dr. Stephan Scheele</a
+    >
+    <a href="https://www.oth-regensburg.de/personen/detailansicht/titus-dose"
+      >Prof. Dr. Titus Dose</a
+    >
+    <a
+      href="/karelweb-ws2026/tutorial/THIRD_PARTY_NOTICES.txt"
+      >Third-party licenses</a
+    >
+  </div>
+</footer>
+
+      </main>
+    </div>
+    <dialog id="confirmation">
+      <form method="dialog">
+        <h2 id="confirmation-title"></h2>
+        <p id="confirmation-copy"></p>
+        <div>
+          <button class="secondary-button" value="cancel">Keep my work</button
+          ><button class="primary-button" value="confirm">Reset</button>
+        </div>
+      </form>
+    </dialog>
+    <noscript
+      >This tutorial needs JavaScript to run Karel and check your
+      solutions.</noscript
+    >
+  </body>
+</html>

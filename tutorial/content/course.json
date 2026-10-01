@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "karel-foundations",
+  "title": "First steps with Karel",
+  "lessons": [
+    {
+      "id": "01-first-step",
+      "title": "Reach the beeper",
+      "summary": "Sequence three forward steps.",
+      "revision": 2,
+      "path": "lessons/01-first-step/lesson.json"
+    },
+    {
+      "id": "02-around-the-corner",
+      "title": "Around the corner",
+      "summary": "Navigate a corridor with a left turn.",
+      "revision": 2,
+      "path": "lessons/02-around-the-corner/lesson.json"
+    },
+    {
+      "id": "03-beeper-delivery",
+      "title": "Beeper delivery",
+      "summary": "Pick up, carry and place a beeper.",
+      "revision": 1,
+      "path": "lessons/03-beeper-delivery/lesson.json"
+    }
+  ]
+}

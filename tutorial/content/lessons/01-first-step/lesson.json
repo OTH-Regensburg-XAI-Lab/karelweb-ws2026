@@ -1,0 +1,36 @@
+{
+  "introduction": "A program is a sequence of precise instructions. Plan a route to the beeper, then translate it into commands.",
+  "explanation": "move(); advances Karel by exactly one square in its current direction. Each command ends with a semicolon. A beeper is shown as a gold coin; in this task it marks the destination.",
+  "objective": "Reach the beeper at (4, 1) in three forward steps. Finish facing east and leave the beeper on the ground.",
+  "instruction": "Write the commands inside main. Read the coordinates as (avenue, street). Compile and step through your program, then check the complete solution.",
+  "commands": [
+    {
+      "code": "move();",
+      "description": "Go one square forward."
+    }
+  ],
+  "hints": [
+    "Karel already faces east. Count the gaps between the starting square and the beeper.",
+    "One move(); crosses one gap. Repeat the command on separate lines inside main.",
+    "The route is three squares long. Use three move(); commands, each followed by a semicolon."
+  ],
+  "illustration": {
+    "src": "images/move.png",
+    "alt": "Before: Karel is on square 1, facing right. After move(); Karel is on square 2, still facing right. Each strip contains three squares.",
+    "caption": "One command. One square. The same direction.",
+    "width": 1774,
+    "height": 887
+  },
+  "version": 1,
+  "id": "01-first-step",
+  "revision": 2,
+  "title": "Reach the beeper",
+  "sourcePath": "starter.karel",
+  "gradingPath": "grading.json",
+  "cases": [
+    {
+      "id": "default",
+      "label": "Straight route"
+    }
+  ]
+}

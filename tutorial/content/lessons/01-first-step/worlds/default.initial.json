@@ -1,0 +1,24 @@
+{
+  "format": "karel-world",
+  "version": 1,
+  "name": "Reach the beeper",
+  "avenues": 4,
+  "streets": 1,
+  "karel": {
+    "avenue": 1,
+    "street": 1,
+    "direction": "east"
+  },
+  "beeperBag": {
+    "kind": "finite",
+    "count": 0
+  },
+  "beepers": [
+    {
+      "avenue": 4,
+      "street": 1,
+      "count": 1
+    }
+  ],
+  "walls": []
+}
