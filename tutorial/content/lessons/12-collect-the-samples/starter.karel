@@ -1,0 +1,10 @@
+void collectHere() {
+  // Pick up a coin if present.
+}
+void collectLeg() {
+  // Inspect the first square and all squares reached.
+}
+int main() {
+  collectLeg(); turnLeft(); collectLeg();
+  // Unload at the depot.
+}

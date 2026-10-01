@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "id": "10-stop-at-the-checkpoint",
+  "revision": 1,
+  "title": "Stop at the checkpoint",
+  "introduction": "Stop at the first coin, or at the wall if no checkpoint exists.",
+  "explanation": "&& means AND: both conditions must be true. In a while condition, frontIsClear() && !beepersPresent() permits a step only if there is space ahead and no coin on the current square.",
+  "objective": "Reach the first coin without picking it up. If there is no coin, reach the end of the corridor. Always finish facing east with the bag empty.",
+  "instruction": "Use && in a while condition. Handle a checkpoint at the starting square and a start directly at the wall.",
+  "commands": [
+    {
+      "code": "conditionA && conditionB",
+      "description": "True only when both conditions are true."
+    }
+  ],
+  "hints": [
+    "Stopping has two possible reasons: a coin here or a wall ahead.",
+    "The continuation condition must rule out both reasons.",
+    "Check for a clear path AND no coin before each move."
+  ],
+  "requirements": ["while", "and"],
+  "illustration": {
+    "src": "images/concept.png",
+    "alt": "Continue only when both checks hold: the path is clear and this square has no coin. Stop on the checkpoint, without collecting it.",
+    "caption": "Continue only when both checks hold: the path is clear and this square has no coin. Stop on the checkpoint, without collecting it.",
+    "width": 1774,
+    "height": 887
+  },
+  "sourcePath": "starter.karel",
+  "gradingPath": "grading.json",
+  "cases": [
+    {
+      "id": "case-1",
+      "label": "Checkpoint midway"
+    },
+    {
+      "id": "case-2",
+      "label": "Checkpoint at start"
+    },
+    {
+      "id": "case-3",
+      "label": "No checkpoint"
+    },
+    {
+      "id": "case-4",
+      "label": "Already at wall"
+    }
+  ]
+}

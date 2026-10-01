@@ -1,0 +1,45 @@
+{
+  "format": "karel-grading",
+  "version": 1,
+  "problemId": "14-complete-the-route",
+  "languageProfile": "base-karel-c-v2",
+  "limits": {
+    "maxSourceBytes": 16384,
+    "maxAstNodes": 5000,
+    "maxInstructionsPerTest": 10000,
+    "maxVisibleActionsPerTest": 500,
+    "deadlineMsPerTest": 1000
+  },
+  "tests": [
+    {
+      "id": "case-1",
+      "visibility": "public",
+      "weight": 34,
+      "initialWorldPath": "worlds/case-1.initial.json",
+      "goal": {
+        "kind": "exactWorld",
+        "targetWorldPath": "worlds/case-1.target.json"
+      }
+    },
+    {
+      "id": "case-2",
+      "visibility": "public",
+      "weight": 33,
+      "initialWorldPath": "worlds/case-2.initial.json",
+      "goal": {
+        "kind": "exactWorld",
+        "targetWorldPath": "worlds/case-2.target.json"
+      }
+    },
+    {
+      "id": "case-3",
+      "visibility": "public",
+      "weight": 33,
+      "initialWorldPath": "worlds/case-3.initial.json",
+      "goal": {
+        "kind": "exactWorld",
+        "targetWorldPath": "worlds/case-3.target.json"
+      }
+    }
+  ]
+}

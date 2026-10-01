@@ -1,0 +1,99 @@
+{
+  "format": "karel-world",
+  "version": 1,
+  "name": "Tutorial practice",
+  "avenues": 5,
+  "streets": 5,
+  "karel": {
+    "avenue": 3,
+    "street": 3,
+    "direction": "north"
+  },
+  "beeperBag": {
+    "kind": "finite",
+    "count": 1
+  },
+  "beepers": [],
+  "walls": [
+    {
+      "avenue": 1,
+      "street": 2,
+      "direction": "north"
+    },
+    {
+      "avenue": 1,
+      "street": 3,
+      "direction": "north"
+    },
+    {
+      "avenue": 2,
+      "street": 1,
+      "direction": "east"
+    },
+    {
+      "avenue": 2,
+      "street": 2,
+      "direction": "east"
+    },
+    {
+      "avenue": 2,
+      "street": 2,
+      "direction": "north"
+    },
+    {
+      "avenue": 2,
+      "street": 3,
+      "direction": "north"
+    },
+    {
+      "avenue": 2,
+      "street": 4,
+      "direction": "east"
+    },
+    {
+      "avenue": 2,
+      "street": 5,
+      "direction": "east"
+    },
+    {
+      "avenue": 3,
+      "street": 1,
+      "direction": "east"
+    },
+    {
+      "avenue": 3,
+      "street": 2,
+      "direction": "east"
+    },
+    {
+      "avenue": 3,
+      "street": 4,
+      "direction": "east"
+    },
+    {
+      "avenue": 3,
+      "street": 5,
+      "direction": "east"
+    },
+    {
+      "avenue": 4,
+      "street": 2,
+      "direction": "north"
+    },
+    {
+      "avenue": 4,
+      "street": 3,
+      "direction": "north"
+    },
+    {
+      "avenue": 5,
+      "street": 2,
+      "direction": "north"
+    },
+    {
+      "avenue": 5,
+      "street": 3,
+      "direction": "north"
+    }
+  ]
+}

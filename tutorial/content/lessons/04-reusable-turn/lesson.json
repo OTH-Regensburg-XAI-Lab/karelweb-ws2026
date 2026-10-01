@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "id": "04-reusable-turn",
+  "revision": 1,
+  "title": "A reusable turn",
+  "introduction": "Give a useful sequence a name, then use it twice.",
+  "explanation": "A function groups commands. Define void turnRight() with three turnLeft(); commands. Calling turnRight(); runs that body and then continues after the call. Definitions alone do not execute.",
+  "objective": "Follow the U-shaped corridor. Leave one coin on each of its two corners, then reach the far end facing along the last leg. Empty your bag.",
+  "instruction": "Both worlds use the same distances: four steps, a right turn, two steps, a right turn, four steps. Define and call turnRight().",
+  "commands": [
+    {
+      "code": "void turnRight() { ... }",
+      "description": "Define a reusable sequence outside main."
+    },
+    {
+      "code": "turnRight();",
+      "description": "Call your function wherever a right turn is needed."
+    }
+  ],
+  "hints": [
+    "Three left turns equal one right turn.",
+    "Place a coin at each corner before continuing.",
+    "Define the function once; call it at both corners. The rotated world needs the same relative movements."
+  ],
+  "requirements": ["helper:turnRight"],
+  "illustration": {
+    "src": "images/concept.png",
+    "alt": "Three left turns produce one right turn. A named function lets the same command sequence be used at both corners.",
+    "caption": "Three left turns produce one right turn. A named function lets the same command sequence be used at both corners.",
+    "width": 1774,
+    "height": 887
+  },
+  "sourcePath": "starter.karel",
+  "gradingPath": "grading.json",
+  "cases": [
+    {
+      "id": "case-1",
+      "label": "U-shaped route"
+    },
+    {
+      "id": "case-2",
+      "label": "Rotated route"
+    }
+  ]
+}

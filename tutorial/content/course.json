@@ -23,6 +23,83 @@
       "summary": "Pick up, carry and place a beeper.",
       "revision": 1,
       "path": "lessons/03-beeper-delivery/lesson.json"
+    },
+    {
+      "id": "04-reusable-turn",
+      "title": "A reusable turn",
+      "summary": "Give a useful sequence a name, then use it twice.",
+      "revision": 1,
+      "path": "lessons/04-reusable-turn/lesson.json"
+    },
+    {
+      "id": "05-mark-the-staircase",
+      "title": "Mark the staircase",
+      "summary": "Recognise a repeating route and express it as one repeated block.",
+      "revision": 1,
+      "path": "lessons/05-mark-the-staircase/lesson.json"
+    },
+    {
+      "id": "06-check-the-passage",
+      "title": "Check the passage",
+      "summary": "Inspect three side bays; enter only the ones that are open.",
+      "revision": 1,
+      "path": "lessons/06-check-the-passage/lesson.json"
+    },
+    {
+      "id": "07-switch-the-markers",
+      "title": "Switch the markers",
+      "summary": "Invert a row of three stations: occupied becomes empty, empty becomes occupied.",
+      "revision": 1,
+      "path": "lessons/07-switch-the-markers/lesson.json"
+    },
+    {
+      "id": "08-follow-the-corridor",
+      "title": "Follow the corridor",
+      "summary": "Deliver a coin through two legs whose lengths vary.",
+      "revision": 1,
+      "path": "lessons/08-follow-the-corridor/lesson.json"
+    },
+    {
+      "id": "09-find-north",
+      "title": "Find north",
+      "summary": "Use an absolute direction to select the correct branch of an intersection.",
+      "revision": 1,
+      "path": "lessons/09-find-north/lesson.json"
+    },
+    {
+      "id": "10-stop-at-the-checkpoint",
+      "title": "Stop at the checkpoint",
+      "summary": "Stop at the first coin, or at the wall if no checkpoint exists.",
+      "revision": 1,
+      "path": "lessons/10-stop-at-the-checkpoint/lesson.json"
+    },
+    {
+      "id": "11-flag-the-station",
+      "title": "Flag the station",
+      "summary": "Mark stations with restricted side access.",
+      "revision": 1,
+      "path": "lessons/11-flag-the-station/lesson.json"
+    },
+    {
+      "id": "12-collect-the-samples",
+      "title": "Collect the samples",
+      "summary": "Combine a repeated walk with a decision on every square.",
+      "revision": 1,
+      "path": "lessons/12-collect-the-samples/lesson.json"
+    },
+    {
+      "id": "13-return-to-base",
+      "title": "Return to base",
+      "summary": "Explore to the end, then mark the route while returning to your starting square.",
+      "revision": 1,
+      "path": "lessons/13-return-to-base/lesson.json"
+    },
+    {
+      "id": "14-complete-the-route",
+      "title": "Complete the route",
+      "summary": "Design a reusable solution for a three-leg route with missing markers.",
+      "revision": 1,
+      "path": "lessons/14-complete-the-route/lesson.json"
     }
   ]
 }

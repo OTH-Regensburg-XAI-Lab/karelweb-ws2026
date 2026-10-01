@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "id": "08-follow-the-corridor",
+  "revision": 1,
+  "title": "Follow the corridor",
+  "introduction": "Deliver a coin through two legs whose lengths vary.",
+  "explanation": "while checks a condition before every iteration. It repeats while the condition is true and may run zero times. A move changes the world, so the next sensor result may differ.",
+  "objective": "Reach the far end of the L-shaped corridor and place your coin there. Finish facing north with an empty bag.",
+  "instruction": "Use sensor-controlled while loops for both straight legs. Turn left once at the corner. One world starts at that corner.",
+  "commands": [
+    {
+      "code": "while (frontIsClear()) { move(); }",
+      "description": "Keep moving until the next step would hit a wall."
+    }
+  ],
+  "hints": [
+    "You do not need to count the squares.",
+    "Complete the first leg, turn left, then use the same strategy on the second.",
+    "Place the coin after the second loop ends, not inside it."
+  ],
+  "requirements": ["while", "sensor:frontIsClear"],
+  "illustration": {
+    "src": "images/concept.png",
+    "alt": "A while loop checks the path before every step. At a wall the straight walk stops; the next command can turn into another leg.",
+    "caption": "A while loop checks the path before every step. At a wall the straight walk stops; the next command can turn into another leg.",
+    "width": 1774,
+    "height": 887
+  },
+  "sourcePath": "starter.karel",
+  "gradingPath": "grading.json",
+  "cases": [
+    {
+      "id": "case-1",
+      "label": "Long corridor"
+    },
+    {
+      "id": "case-2",
+      "label": "Shorter legs"
+    },
+    {
+      "id": "case-3",
+      "label": "Start at the corner"
+    }
+  ]
+}

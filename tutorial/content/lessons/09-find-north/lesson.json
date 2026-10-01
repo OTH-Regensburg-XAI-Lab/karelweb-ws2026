@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "id": "09-find-north",
+  "revision": 1,
+  "title": "Find north",
+  "introduction": "Use an absolute direction to select the correct branch of an intersection.",
+  "explanation": "! negates a condition: !facingNorth() is true whenever Karel is not facing north. Combined with while, it can turn an unknown starting direction into a known one.",
+  "objective": "Face north, follow the northern branch, and place the coin at (3, 5). Finish there facing north with an empty bag.",
+  "instruction": "The initial direction varies across all four compass directions. Use ! with facingNorth().",
+  "commands": [
+    {
+      "code": "facingNorth()",
+      "description": "True exactly when Karel faces north."
+    },
+    {
+      "code": "!facingNorth()",
+      "description": "True when Karel faces any other direction."
+    }
+  ],
+  "hints": [
+    "Rotate until the desired direction is reached.",
+    "When already facing north, the turning loop must execute zero times.",
+    "Use while (!facingNorth()) with turnLeft();, then walk to the wall and place the coin."
+  ],
+  "requirements": ["not", "while", "sensor:facingNorth"],
+  "illustration": {
+    "src": "images/concept.png",
+    "alt": "The compass gives an absolute heading. Keep turning while not facing north, then follow the northern branch.",
+    "caption": "The compass gives an absolute heading. Keep turning while not facing north, then follow the northern branch.",
+    "width": 1774,
+    "height": 887
+  },
+  "sourcePath": "starter.karel",
+  "gradingPath": "grading.json",
+  "cases": [
+    {
+      "id": "case-1",
+      "label": "Initially facing east"
+    },
+    {
+      "id": "case-2",
+      "label": "Initially facing south"
+    },
+    {
+      "id": "case-3",
+      "label": "Initially facing west"
+    },
+    {
+      "id": "case-4",
+      "label": "Initially facing north"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "id": "13-return-to-base",
+  "revision": 1,
+  "title": "Return to base",
+  "introduction": "Explore to the end, then mark the route while returning to your starting square.",
+  "explanation": "A recursive function calls itself. Each call pauses until the inner call finishes. Here the blocked end is the base case: turn around there. Commands after explore(); then execute on the return journey, one level at a time.",
+  "objective": "Return to your original starting square facing west. On the return trip place one coin on every square you step back onto, including the start. Leave the turnaround square empty. Keep unused coins.",
+  "instruction": "Complete explore() with a direct recursive call. The bag starts with five coins. If already at the wall, only turn around; place no coin.",
+  "commands": [
+    {
+      "code": "explore();",
+      "description": "Inside explore(), this calls the same function for the remaining corridor."
+    },
+    {
+      "code": "if (frontIsClear()) { ... } else { turnAround(); }",
+      "description": "The wall stops further recursive calls."
+    }
+  ],
+  "hints": [
+    "The outward move is already provided. Think about which operations must wait until the recursive call returns.",
+    "At the wall Karel turns west. It stays west throughout the return.",
+    "After move(): call explore(); then move(); then putBeeper();."
+  ],
+  "requirements": ["recursion"],
+  "illustration": {
+    "src": "images/concept.png",
+    "alt": "Explore the empty corridor first. After turning at the wall, recursive calls return in reverse order and mark each square on the way back.",
+    "caption": "Explore the empty corridor first. After turning at the wall, recursive calls return in reverse order and mark each square on the way back.",
+    "width": 1774,
+    "height": 887
+  },
+  "sourcePath": "starter.karel",
+  "gradingPath": "grading.json",
+  "cases": [
+    {
+      "id": "case-1",
+      "label": "Long return"
+    },
+    {
+      "id": "case-2",
+      "label": "Short return"
+    },
+    {
+      "id": "case-3",
+      "label": "No outward step"
+    }
+  ]
+}

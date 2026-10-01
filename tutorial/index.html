@@ -6,11 +6,11 @@
     <meta name="theme-color" content="#174c3c" />
     <meta
       name="description"
-      content="Learn to code, one small step at a time. A hands-on introduction to Karel with three guided lessons."
+      content="Learn to code, one small step at a time. A hands-on introduction to Karel with fourteen guided lessons."
     />
     <title>Karel — First steps</title>
-    <script type="module" crossorigin src="/karelweb-ws2026/tutorial/assets/index-V9GDELL9.js"></script>
-    <link rel="stylesheet" crossorigin href="/karelweb-ws2026/tutorial/assets/index-DdMj2zMY.css">
+    <script type="module" crossorigin src="/karelweb-ws2026/tutorial/assets/index-ZbWUOgFl.js"></script>
+    <link rel="stylesheet" crossorigin href="/karelweb-ws2026/tutorial/assets/index-rddoKoQG.css">
   </head>
   <body>
     <a class="skip-link" href="#lesson-title">Skip to lesson</a>
@@ -23,9 +23,8 @@
         ></a
       >
       <span class="edition"
-        >FIRST STEPS
-        <span class="edition-dot" aria-hidden="true"></span> 3-LESSON
-        PREVIEW</span
+        >FIRST STEPS <span class="edition-dot" aria-hidden="true"></span> 14
+        LESSONS</span
       >
     </header>
     <div class="layout">
@@ -37,12 +36,12 @@
         </p>
         <div class="course-progress">
           <div>
-            <span id="progress-label">0 of 3 completed</span
+            <span id="progress-label">0 of 14 completed</span
             ><span id="progress-percent">0%</span>
           </div>
           <progress
             id="progress-bar"
-            max="3"
+            max="14"
             value="0"
             aria-label="Completed lessons"
           ></progress>
@@ -80,19 +79,18 @@
           <div class="lesson-heading">
             <p class="eyebrow" id="lesson-number"></p>
             <span class="lesson-meta"
-              >BEGINNER <span aria-hidden="true">·</span> 3–5 MIN</span
+              >FOUNDATIONS <span aria-hidden="true">·</span> LEARN AT YOUR
+              PACE</span
             >
           </div>
           <h1 id="lesson-title" tabindex="-1"></h1>
           <p class="introduction" id="introduction"></p>
           <section class="explanation-card" aria-labelledby="new-command-title">
             <div class="explanation-copy">
-              <span class="section-step"
-                >01 <span>GET TO KNOW THE COMMAND</span></span
-              >
+              <span class="section-step">01 <span>EXPLORE THE IDEA</span></span>
               <h2 id="new-command-title">
-                Small instruction.<br />
-                Visible change.
+                Understand it.<br />
+                Put it to work.
               </h2>
               <p id="explanation"></p>
               <div id="commands" class="commands"></div>
@@ -119,6 +117,15 @@
               <span class="coordinate-note">(avenue, street)</span>
             </div>
             <p class="instruction" id="instruction"></p>
+            <p id="requirements" class="requirements"></p>
+            <div id="case-picker" class="case-picker" hidden>
+              <label for="practice-case">Practice world</label>
+              <select id="practice-case"></select>
+              <span
+                >Switching worlds keeps your code. Check solution runs all
+                worlds.</span
+              >
+            </div>
             <div id="runner-mount"></div>
             <div class="practice-actions">
               <button class="text-button" id="reset-world" type="button">
@@ -145,6 +152,11 @@
                 </button>
               </div>
             </div>
+            <ul
+              id="case-results"
+              class="case-results"
+              aria-label="World check results"
+            ></ul>
           </section>
           <div class="lesson-bottom">
             <details class="hints">
@@ -155,18 +167,112 @@
               Next lesson <span aria-hidden="true">→</span>
             </button>
           </div>
+          <details class="reference">
+            <summary>Karel quick reference</summary>
+            <p>
+              Commands change the world; sensors return true or false without
+              changing it. Directions are relative to Karel, except compass
+              sensors. Beepers are shown as coins.
+            </p>
+            <div class="reference-grid">
+              <section>
+                <h3>Actions</h3>
+                <dl>
+                  <dt><code>move();</code></dt>
+                  <dd>One square forward; requires a clear path.</dd>
+                  <dt><code>turnLeft();</code></dt>
+                  <dd>Rotate 90° left on the same square.</dd>
+                  <dt><code>pickBeeper();</code></dt>
+                  <dd>Take one coin here; requires a coin.</dd>
+                  <dt><code>putBeeper();</code></dt>
+                  <dd>Place one coin here; requires a coin in the bag.</dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Path sensors</h3>
+                <dl>
+                  <dt><code>frontIsClear() / frontIsBlocked()</code></dt>
+                  <dd>Accessible / blocked square ahead.</dd>
+                  <dt><code>leftIsClear() / leftIsBlocked()</code></dt>
+                  <dd>Accessible / blocked square to the left.</dd>
+                  <dt><code>rightIsClear() / rightIsBlocked()</code></dt>
+                  <dd>Accessible / blocked square to the right.</dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Coin sensors</h3>
+                <dl>
+                  <dt><code>beepersPresent() / noBeepersPresent()</code></dt>
+                  <dd>Current square contains a coin / is empty.</dd>
+                  <dt><code>beepersInBag() / noBeepersInBag()</code></dt>
+                  <dd>Bag contains a coin / is empty.</dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Direction sensors</h3>
+                <dl>
+                  <dt><code>facingNorth() / notFacingNorth()</code></dt>
+                  <dd>Facing / not facing north.</dd>
+                  <dt><code>facingEast() / notFacingEast()</code></dt>
+                  <dd>Facing / not facing east.</dd>
+                  <dt><code>facingSouth() / notFacingSouth()</code></dt>
+                  <dd>Facing / not facing south.</dd>
+                  <dt><code>facingWest() / notFacingWest()</code></dt>
+                  <dd>Facing / not facing west.</dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Control flow</h3>
+                <dl>
+                  <dt><code>if (condition) { ... } else { ... }</code></dt>
+                  <dd>Select a branch; else is optional.</dd>
+                  <dt><code>while (condition) { ... }</code></dt>
+                  <dd>Check before each repetition; may run zero times.</dd>
+                  <dt><code>for (int i = 0; i &lt; 4; i++) { ... }</code></dt>
+                  <dd>
+                    Fixed repetition; replace 4 with a nonnegative integer.
+                  </dd>
+                  <dt><code>!a / a &amp;&amp; b / a || b</code></dt>
+                  <dd>
+                    NOT / AND / OR. Precedence: ! then &amp;&amp; then ||.
+                    Parentheses group conditions.
+                  </dd>
+                </dl>
+              </section>
+              <section>
+                <h3>Functions</h3>
+                <dl>
+                  <dt><code>void helper() { ... }</code></dt>
+                  <dd>Define a function outside main, then call helper();.</dd>
+                  <dt><code>int main() { ... }</code></dt>
+                  <dd>Program entry. Finishing main ends the program.</dd>
+                  <dt><code>helper();</code></dt>
+                  <dd>
+                    A call inside the same function is recursion. It needs a
+                    terminating case.
+                  </dd>
+                </dl>
+              </section>
+            </div>
+            <p>
+              This teaching language supports commands, conditions and
+              parameterless functions. It does not support general variables,
+              arithmetic, parameters or return values. The for counter belongs
+              only to the fixed-repeat syntax.
+            </p>
+          </details>
           <section
             id="completion"
             class="completion"
             aria-labelledby="completion-title"
             hidden
           >
-            <span class="eyebrow">THREE TASKS. ONE FOUNDATION.</span>
-            <h2 id="completion-title">You can plan and execute a route.</h2>
+            <span class="eyebrow">FOURTEEN TASKS. ONE FOUNDATION.</span>
+            <h2 id="completion-title">You can turn a plan into a program.</h2>
             <p>
-              You can navigate a corridor, turn left, and transport a beeper.
-              You have completed all three lessons in this preview. Revisit any
-              lesson to test another solution.
+              You can build reusable functions, make decisions, repeat actions
+              and solve a route recursively. All fourteen lessons are complete.
+              Revisit any lesson to explore another solution.
             </p>
             <button id="revisit" class="secondary-button" type="button">
               Back to lesson 1

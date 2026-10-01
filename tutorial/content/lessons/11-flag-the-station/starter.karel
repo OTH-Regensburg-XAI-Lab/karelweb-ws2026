@@ -1,0 +1,7 @@
+void flagStation() {
+  // Place at most one coin at this station.
+}
+int main() {
+  move();
+  for (int i = 0; i < 3; i++) { flagStation(); move(); }
+}

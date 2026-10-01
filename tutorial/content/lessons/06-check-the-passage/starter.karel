@@ -1,0 +1,11 @@
+void turnRight() { turnLeft(); turnLeft(); turnLeft(); }
+void turnAround() { turnLeft(); turnLeft(); }
+void inspectBay() {
+  turnLeft();
+  // If the passage is clear: enter, mark, return, face north again.
+  turnRight();
+}
+int main() {
+  move();
+  for (int i = 0; i < 3; i++) { inspectBay(); move(); }
+}

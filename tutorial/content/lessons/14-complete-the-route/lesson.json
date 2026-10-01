@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "id": "14-complete-the-route",
+  "revision": 1,
+  "title": "Complete the route",
+  "introduction": "Design a reusable solution for a three-leg route with missing markers.",
+  "explanation": "Combine functions, sensor-controlled loops and decisions. Separate two responsibilities: mark the current square if needed, and complete a straight leg. Reuse those operations rather than counting or copying moves.",
+  "objective": "Leave exactly one coin on every route square, including the start, both corners and the endpoint. Preserve existing markers without adding duplicates. Finish at the far end facing west with an empty bag.",
+  "instruction": "The path has three straight legs joined by two left turns. Lengths and initial coin patterns vary. Define and call at least one helper, and use while and if. The bag contains exactly enough coins for the gaps.",
+  "commands": [
+    {
+      "code": "void markHere() { ... }",
+      "description": "A possible helper: ensure this square has exactly one coin."
+    },
+    {
+      "code": "void followLeg() { ... }",
+      "description": "A possible helper: mark a complete straight leg."
+    }
+  ],
+  "hints": [
+    "First solve the local task: an empty square needs one coin; an occupied square needs no action.",
+    "Check the first square and every square reached after moving. This also covers corners.",
+    "Use the same straight-leg helper three times, with a left turn between calls."
+  ],
+  "requirements": ["helper", "while", "if"],
+  "illustration": {
+    "src": "images/concept.png",
+    "alt": "A complete marked route combines movement, checking and placement. Existing coins stay in place; only gaps receive a new coin.",
+    "caption": "A complete marked route combines movement, checking and placement. Existing coins stay in place; only gaps receive a new coin.",
+    "width": 1774,
+    "height": 887
+  },
+  "sourcePath": "starter.karel",
+  "gradingPath": "grading.json",
+  "cases": [
+    {
+      "id": "case-1",
+      "label": "Long route"
+    },
+    {
+      "id": "case-2",
+      "label": "Shorter route"
+    },
+    {
+      "id": "case-3",
+      "label": "Already marked"
+    }
+  ]
+}

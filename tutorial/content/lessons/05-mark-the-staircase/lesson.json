@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "id": "05-mark-the-staircase",
+  "revision": 1,
+  "title": "Mark the staircase",
+  "introduction": "Recognise a repeating route and express it as one repeated block.",
+  "explanation": "A for loop repeats its body a fixed number of times. Here, one unit is a whole stair: east, mark, left, north, mark, right. Karel is facing east again before the next repetition.",
+  "objective": "Climb all four stairs. Put exactly one coin on every square you enter. Leave the starting square empty. Finish at (5, 5), facing east, with an empty bag.",
+  "instruction": "Use a for loop with four repetitions. The supplied turnRight() function is the one you built in the previous lesson.",
+  "commands": [
+    {
+      "code": "for (int i = 0; i < 4; i++) { ... }",
+      "description": "Run the entire block four times. The counter is only used by this fixed-repeat form."
+    }
+  ],
+  "hints": [
+    "Find the shortest block that both climbs one stair and restores the starting direction.",
+    "Each stair needs two moves, two putBeeper() calls and two turns.",
+    "Inside the loop: move and mark, turn left, move and mark, then turn right."
+  ],
+  "requirements": ["repeat"],
+  "illustration": {
+    "src": "images/concept.png",
+    "alt": "One stair unit: move east and mark, then move north and mark. Repeat this unit four times, restoring the eastward heading after each stair.",
+    "caption": "One stair unit: move east and mark, then move north and mark. Repeat this unit four times, restoring the eastward heading after each stair.",
+    "width": 1774,
+    "height": 887
+  },
+  "sourcePath": "starter.karel",
+  "gradingPath": "grading.json",
+  "cases": [
+    {
+      "id": "case-1",
+      "label": "Four stairs"
+    }
+  ]
+}

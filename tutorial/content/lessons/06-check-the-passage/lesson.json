@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "id": "06-check-the-passage",
+  "revision": 1,
+  "title": "Check the passage",
+  "introduction": "Inspect three side bays; enter only the ones that are open.",
+  "explanation": "A sensor asks a question without changing the world. if (frontIsClear()) executes its block only when the next square is accessible. When it is blocked, execution continues after the block.",
+  "objective": "Leave one coin inside each open bay and none in the main corridor. Finish at (5, 1), facing east. Keep unused coins in the bag.",
+  "instruction": "The starter already visits the three inspection points. Complete inspectBay() using if and frontIsClear(). After each inspection Karel must face east again.",
+  "commands": [
+    {
+      "code": "frontIsClear()",
+      "description": "True when Karel can move one square forward."
+    },
+    {
+      "code": "if (frontIsClear()) { ... }",
+      "description": "Perform the block only when the passage is open."
+    }
+  ],
+  "hints": [
+    "The helper turns north before your code and east afterwards.",
+    "Entering and returning both need move(). Use turnAround() at the far end.",
+    "Inside the if: move, put a coin, turn around, move back, turn around again."
+  ],
+  "requirements": ["if", "sensor:frontIsClear"],
+  "illustration": {
+    "src": "images/concept.png",
+    "alt": "An open side bay can be entered and marked; a blocked bay is skipped. The sensor checks before any movement.",
+    "caption": "An open side bay can be entered and marked; a blocked bay is skipped. The sensor checks before any movement.",
+    "width": 1774,
+    "height": 887
+  },
+  "sourcePath": "starter.karel",
+  "gradingPath": "grading.json",
+  "cases": [
+    {
+      "id": "case-1",
+      "label": "Some bays open"
+    },
+    {
+      "id": "case-2",
+      "label": "All bays open"
+    },
+    {
+      "id": "case-3",
+      "label": "All bays blocked"
+    }
+  ]
+}

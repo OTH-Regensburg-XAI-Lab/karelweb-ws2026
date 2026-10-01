@@ -1,0 +1,18 @@
+{
+  "format": "karel-world",
+  "version": 1,
+  "name": "Tutorial practice",
+  "avenues": 5,
+  "streets": 1,
+  "karel": {
+    "avenue": 1,
+    "street": 1,
+    "direction": "east"
+  },
+  "beeperBag": {
+    "kind": "finite",
+    "count": 3
+  },
+  "beepers": [],
+  "walls": []
+}

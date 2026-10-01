@@ -1,0 +1,10 @@
+void turnAround() { turnLeft(); turnLeft(); }
+void explore() {
+  if (frontIsClear()) {
+    move();
+    // Explore the rest, then step back and mark.
+  } else {
+    turnAround();
+  }
+}
+int main() { explore(); }

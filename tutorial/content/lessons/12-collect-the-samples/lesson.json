@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "id": "12-collect-the-samples",
+  "revision": 1,
+  "title": "Collect the samples",
+  "introduction": "Combine a repeated walk with a decision on every square.",
+  "explanation": "A condition can be nested inside a loop: while decides whether to continue, and if decides what to do on each square. beepersInBag() lets a final loop unload every collected coin. Each route square starts with at most one coin.",
+  "objective": "Collect every coin in both legs of the corridor, including the start, corner and final square. Deposit all of them at the far end. Finish facing north with an empty bag.",
+  "instruction": "Use an if inside a while loop, directly or through a helper. Handle the empty route too. A square must be inspected even when there is no next move.",
+  "commands": [
+    {
+      "code": "beepersInBag()",
+      "description": "True when the bag contains at least one coin."
+    },
+    {
+      "code": "while (beepersInBag()) { putBeeper(); }",
+      "description": "Unload the entire bag on the current square."
+    }
+  ],
+  "hints": [
+    "Inspect the starting square, then inspect again after every move.",
+    "If you inspect only before moving, you may miss the final square.",
+    "A walk helper can collect here, then repeatedly move and collect. Use it for both legs; unload only at the final depot."
+  ],
+  "requirements": ["while", "if-in-while"],
+  "illustration": {
+    "src": "images/concept.png",
+    "alt": "Inspect every square on the route, including corners and endpoints. Collect scattered samples and unload the complete bag at the depot.",
+    "caption": "Inspect every square on the route, including corners and endpoints. Collect scattered samples and unload the complete bag at the depot.",
+    "width": 1774,
+    "height": 887
+  },
+  "sourcePath": "starter.karel",
+  "gradingPath": "grading.json",
+  "cases": [
+    {
+      "id": "case-1",
+      "label": "Scattered samples"
+    },
+    {
+      "id": "case-2",
+      "label": "Corner and depot"
+    },
+    {
+      "id": "case-3",
+      "label": "Empty route"
+    }
+  ]
+}

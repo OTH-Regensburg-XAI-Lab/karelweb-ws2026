@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "id": "11-flag-the-station",
+  "revision": 1,
+  "title": "Flag the station",
+  "introduction": "Mark stations with restricted side access.",
+  "explanation": "|| means OR: at least one condition must be true. It is also true when both conditions hold. One if block runs once, so a station blocked on both sides still receives only one coin.",
+  "objective": "At each of the three middle stations, place one coin if its left side OR its right side is blocked. Place none if both are open. Finish at (5, 2), facing east; keep unused coins.",
+  "instruction": "Complete flagStation() using ||. Do not enter side passages. The four worlds cover every combination of the two sensor values.",
+  "commands": [
+    {
+      "code": "leftIsBlocked()",
+      "description": "True when a wall is immediately to Karel\u2019s left."
+    },
+    {
+      "code": "rightIsBlocked()",
+      "description": "True when a wall is immediately to Karel\u2019s right."
+    },
+    {
+      "code": "conditionA || conditionB",
+      "description": "True when either condition, or both, is true."
+    }
+  ],
+  "hints": [
+    "Sensors are relative to Karel\u2019s current heading.",
+    "One decision should control one putBeeper() call.",
+    "Use if (leftIsBlocked() || rightIsBlocked()) to handle all four combinations."
+  ],
+  "requirements": ["if", "or"],
+  "illustration": {
+    "src": "images/concept.png",
+    "alt": "Left blocked OR right blocked is enough to mark the station. When both are blocked, the single decision still places only one coin.",
+    "caption": "Left blocked OR right blocked is enough to mark the station. When both are blocked, the single decision still places only one coin.",
+    "width": 1774,
+    "height": 887
+  },
+  "sourcePath": "starter.karel",
+  "gradingPath": "grading.json",
+  "cases": [
+    {
+      "id": "case-1",
+      "label": "Both sides open"
+    },
+    {
+      "id": "case-2",
+      "label": "Left blocked"
+    },
+    {
+      "id": "case-3",
+      "label": "Right blocked"
+    },
+    {
+      "id": "case-4",
+      "label": "Both sides blocked"
+    }
+  ]
+}

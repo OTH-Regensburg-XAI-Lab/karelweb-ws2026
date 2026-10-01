@@ -1,0 +1,64 @@
+{
+  "format": "karel-world",
+  "version": 1,
+  "name": "Tutorial practice",
+  "avenues": 5,
+  "streets": 3,
+  "karel": {
+    "avenue": 1,
+    "street": 1,
+    "direction": "east"
+  },
+  "beeperBag": {
+    "kind": "finite",
+    "count": 3
+  },
+  "beepers": [],
+  "walls": [
+    {
+      "avenue": 1,
+      "street": 1,
+      "direction": "north"
+    },
+    {
+      "avenue": 1,
+      "street": 2,
+      "direction": "east"
+    },
+    {
+      "avenue": 2,
+      "street": 2,
+      "direction": "east"
+    },
+    {
+      "avenue": 2,
+      "street": 2,
+      "direction": "north"
+    },
+    {
+      "avenue": 3,
+      "street": 2,
+      "direction": "east"
+    },
+    {
+      "avenue": 3,
+      "street": 2,
+      "direction": "north"
+    },
+    {
+      "avenue": 4,
+      "street": 2,
+      "direction": "east"
+    },
+    {
+      "avenue": 4,
+      "street": 2,
+      "direction": "north"
+    },
+    {
+      "avenue": 5,
+      "street": 1,
+      "direction": "north"
+    }
+  ]
+}

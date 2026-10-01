@@ -1,0 +1,155 @@
+{
+  "format": "karel-world",
+  "version": 1,
+  "name": "Tutorial practice",
+  "avenues": 6,
+  "streets": 5,
+  "karel": {
+    "avenue": 3,
+    "street": 4,
+    "direction": "west"
+  },
+  "beeperBag": {
+    "kind": "finite",
+    "count": 0
+  },
+  "beepers": [
+    {
+      "avenue": 1,
+      "street": 1,
+      "count": 1
+    },
+    {
+      "avenue": 2,
+      "street": 1,
+      "count": 1
+    },
+    {
+      "avenue": 3,
+      "street": 1,
+      "count": 1
+    },
+    {
+      "avenue": 4,
+      "street": 1,
+      "count": 1
+    },
+    {
+      "avenue": 5,
+      "street": 1,
+      "count": 1
+    },
+    {
+      "avenue": 6,
+      "street": 1,
+      "count": 1
+    },
+    {
+      "avenue": 6,
+      "street": 2,
+      "count": 1
+    },
+    {
+      "avenue": 6,
+      "street": 3,
+      "count": 1
+    },
+    {
+      "avenue": 6,
+      "street": 4,
+      "count": 1
+    },
+    {
+      "avenue": 5,
+      "street": 4,
+      "count": 1
+    },
+    {
+      "avenue": 4,
+      "street": 4,
+      "count": 1
+    },
+    {
+      "avenue": 3,
+      "street": 4,
+      "count": 1
+    }
+  ],
+  "walls": [
+    {
+      "avenue": 1,
+      "street": 1,
+      "direction": "north"
+    },
+    {
+      "avenue": 2,
+      "street": 1,
+      "direction": "north"
+    },
+    {
+      "avenue": 2,
+      "street": 4,
+      "direction": "east"
+    },
+    {
+      "avenue": 3,
+      "street": 1,
+      "direction": "north"
+    },
+    {
+      "avenue": 3,
+      "street": 3,
+      "direction": "north"
+    },
+    {
+      "avenue": 3,
+      "street": 4,
+      "direction": "north"
+    },
+    {
+      "avenue": 4,
+      "street": 1,
+      "direction": "north"
+    },
+    {
+      "avenue": 4,
+      "street": 3,
+      "direction": "north"
+    },
+    {
+      "avenue": 4,
+      "street": 4,
+      "direction": "north"
+    },
+    {
+      "avenue": 5,
+      "street": 1,
+      "direction": "north"
+    },
+    {
+      "avenue": 5,
+      "street": 2,
+      "direction": "east"
+    },
+    {
+      "avenue": 5,
+      "street": 3,
+      "direction": "east"
+    },
+    {
+      "avenue": 5,
+      "street": 3,
+      "direction": "north"
+    },
+    {
+      "avenue": 5,
+      "street": 4,
+      "direction": "north"
+    },
+    {
+      "avenue": 6,
+      "street": 4,
+      "direction": "north"
+    }
+  ]
+}

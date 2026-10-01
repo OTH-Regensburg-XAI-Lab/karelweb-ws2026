@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "id": "07-switch-the-markers",
+  "revision": 1,
+  "title": "Switch the markers",
+  "introduction": "Invert a row of three stations: occupied becomes empty, empty becomes occupied.",
+  "explanation": "if and else choose exactly one branch. beepersPresent() checks the current square. Pick up its coin when true; otherwise put one down. The else belongs to the original decision, even after the first branch changes the world.",
+  "objective": "Toggle the coins on (2, 1), (3, 1) and (4, 1). Leave the start and exit empty. Finish at (5, 1), facing east, keeping all collected or unused coins.",
+  "instruction": "Complete switchMarker() with if / else. Each station initially has zero or one coin. The bag starts with three coins.",
+  "commands": [
+    {
+      "code": "beepersPresent()",
+      "description": "True when this square contains at least one coin."
+    },
+    {
+      "code": "if (beepersPresent()) { ... } else { ... }",
+      "description": "Choose the pickup branch or the placement branch, never both."
+    }
+  ],
+  "hints": [
+    "Use the same decision on all three stations.",
+    "Two separate if statements can undo your first action. Use else.",
+    "The true branch picks up; the else branch puts down."
+  ],
+  "requirements": ["else", "sensor:beepersPresent"],
+  "illustration": {
+    "src": "images/concept.png",
+    "alt": "At each station, choose one branch: remove an existing gold coin or place one on an empty square. Never do both.",
+    "caption": "At each station, choose one branch: remove an existing gold coin or place one on an empty square. Never do both.",
+    "width": 1774,
+    "height": 887
+  },
+  "sourcePath": "starter.karel",
+  "gradingPath": "grading.json",
+  "cases": [
+    {
+      "id": "case-1",
+      "label": "Alternating markers"
+    },
+    {
+      "id": "case-2",
+      "label": "Empty stations"
+    },
+    {
+      "id": "case-3",
+      "label": "Full stations"
+    }
+  ]
+}

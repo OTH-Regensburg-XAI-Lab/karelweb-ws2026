@@ -1,0 +1,3 @@
+int main() {
+  // Continue only while both requirements hold.
+}

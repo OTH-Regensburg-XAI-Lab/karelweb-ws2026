@@ -1,0 +1,5 @@
+void turnRight() { turnLeft(); turnLeft(); turnLeft(); }
+
+int main() {
+  // Repeat one complete stair four times.
+}

@@ -1,0 +1,7 @@
+void switchMarker() {
+  // Choose between picking up and putting down.
+}
+int main() {
+  move();
+  for (int i = 0; i < 3; i++) { switchMarker(); move(); }
+}

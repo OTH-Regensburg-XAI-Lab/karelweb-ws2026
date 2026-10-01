@@ -1,0 +1,7 @@
+void turnRight() {
+  // Define the turn.
+}
+
+int main() {
+  // Follow the route and mark both corners.
+}
