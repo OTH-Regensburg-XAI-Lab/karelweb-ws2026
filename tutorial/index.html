@@ -9,8 +9,8 @@
       content="Learn to code, one small step at a time. A hands-on introduction to Karel with fourteen guided lessons."
     />
     <title>Karel — First steps</title>
-    <script type="module" crossorigin src="/karelweb-ws2026/tutorial/assets/index-ZbWUOgFl.js"></script>
-    <link rel="stylesheet" crossorigin href="/karelweb-ws2026/tutorial/assets/index-rddoKoQG.css">
+    <script type="module" crossorigin src="/karelweb-ws2026/tutorial/assets/index-Dya1-N7F.js"></script>
+    <link rel="stylesheet" crossorigin href="/karelweb-ws2026/tutorial/assets/index-u73VRsVG.css">
   </head>
   <body>
     <a class="skip-link" href="#lesson-title">Skip to lesson</a>
@@ -22,10 +22,21 @@
           ><span class="brand-subtitle">learn by doing</span></span
         ></a
       >
-      <span class="edition"
-        >FIRST STEPS <span class="edition-dot" aria-hidden="true"></span> 14
-        LESSONS</span
-      >
+      <div class="header-tools">
+        <button
+          class="secondary-button"
+          type="button"
+          data-language-reference
+          aria-haspopup="dialog"
+          aria-controls="language-reference"
+        >
+          Language reference
+        </button>
+        <span class="edition"
+          >FIRST STEPS <span class="edition-dot" aria-hidden="true"></span> 14
+          LESSONS</span
+        >
+      </div>
     </header>
     <div class="layout">
       <aside class="sidebar" aria-label="Course progress">
@@ -128,6 +139,15 @@
             </div>
             <div id="runner-mount"></div>
             <div class="practice-actions">
+              <button
+                class="secondary-button"
+                type="button"
+                data-language-reference
+                aria-haspopup="dialog"
+                aria-controls="language-reference"
+              >
+                Language reference
+              </button>
               <button class="text-button" id="reset-world" type="button">
                 ↺ Reset world</button
               ><button class="text-button" id="reset-code" type="button">
@@ -167,100 +187,7 @@
               Next lesson <span aria-hidden="true">→</span>
             </button>
           </div>
-          <details class="reference">
-            <summary>Karel quick reference</summary>
-            <p>
-              Commands change the world; sensors return true or false without
-              changing it. Directions are relative to Karel, except compass
-              sensors. Beepers are shown as coins.
-            </p>
-            <div class="reference-grid">
-              <section>
-                <h3>Actions</h3>
-                <dl>
-                  <dt><code>move();</code></dt>
-                  <dd>One square forward; requires a clear path.</dd>
-                  <dt><code>turnLeft();</code></dt>
-                  <dd>Rotate 90° left on the same square.</dd>
-                  <dt><code>pickBeeper();</code></dt>
-                  <dd>Take one coin here; requires a coin.</dd>
-                  <dt><code>putBeeper();</code></dt>
-                  <dd>Place one coin here; requires a coin in the bag.</dd>
-                </dl>
-              </section>
-              <section>
-                <h3>Path sensors</h3>
-                <dl>
-                  <dt><code>frontIsClear() / frontIsBlocked()</code></dt>
-                  <dd>Accessible / blocked square ahead.</dd>
-                  <dt><code>leftIsClear() / leftIsBlocked()</code></dt>
-                  <dd>Accessible / blocked square to the left.</dd>
-                  <dt><code>rightIsClear() / rightIsBlocked()</code></dt>
-                  <dd>Accessible / blocked square to the right.</dd>
-                </dl>
-              </section>
-              <section>
-                <h3>Coin sensors</h3>
-                <dl>
-                  <dt><code>beepersPresent() / noBeepersPresent()</code></dt>
-                  <dd>Current square contains a coin / is empty.</dd>
-                  <dt><code>beepersInBag() / noBeepersInBag()</code></dt>
-                  <dd>Bag contains a coin / is empty.</dd>
-                </dl>
-              </section>
-              <section>
-                <h3>Direction sensors</h3>
-                <dl>
-                  <dt><code>facingNorth() / notFacingNorth()</code></dt>
-                  <dd>Facing / not facing north.</dd>
-                  <dt><code>facingEast() / notFacingEast()</code></dt>
-                  <dd>Facing / not facing east.</dd>
-                  <dt><code>facingSouth() / notFacingSouth()</code></dt>
-                  <dd>Facing / not facing south.</dd>
-                  <dt><code>facingWest() / notFacingWest()</code></dt>
-                  <dd>Facing / not facing west.</dd>
-                </dl>
-              </section>
-              <section>
-                <h3>Control flow</h3>
-                <dl>
-                  <dt><code>if (condition) { ... } else { ... }</code></dt>
-                  <dd>Select a branch; else is optional.</dd>
-                  <dt><code>while (condition) { ... }</code></dt>
-                  <dd>Check before each repetition; may run zero times.</dd>
-                  <dt><code>for (int i = 0; i &lt; 4; i++) { ... }</code></dt>
-                  <dd>
-                    Fixed repetition; replace 4 with a nonnegative integer.
-                  </dd>
-                  <dt><code>!a / a &amp;&amp; b / a || b</code></dt>
-                  <dd>
-                    NOT / AND / OR. Precedence: ! then &amp;&amp; then ||.
-                    Parentheses group conditions.
-                  </dd>
-                </dl>
-              </section>
-              <section>
-                <h3>Functions</h3>
-                <dl>
-                  <dt><code>void helper() { ... }</code></dt>
-                  <dd>Define a function outside main, then call helper();.</dd>
-                  <dt><code>int main() { ... }</code></dt>
-                  <dd>Program entry. Finishing main ends the program.</dd>
-                  <dt><code>helper();</code></dt>
-                  <dd>
-                    A call inside the same function is recursion. It needs a
-                    terminating case.
-                  </dd>
-                </dl>
-              </section>
-            </div>
-            <p>
-              This teaching language supports commands, conditions and
-              parameterless functions. It does not support general variables,
-              arithmetic, parameters or return values. The for counter belongs
-              only to the fixed-repeat syntax.
-            </p>
-          </details>
+
           <section
             id="completion"
             class="completion"
@@ -298,6 +225,144 @@
 
       </main>
     </div>
+    <dialog
+      id="language-reference"
+      class="reference"
+      aria-labelledby="reference-title"
+    >
+      <header class="reference-heading">
+        <h2 id="reference-title">Karel language reference</h2>
+        <form method="dialog">
+          <button class="secondary-button" autofocus>Close reference</button>
+        </form>
+      </header>
+      <div
+        class="reference-body"
+        tabindex="0"
+        role="region"
+        aria-label="Language reference content"
+      >
+        <p>
+          Commands change the world; sensors return true or false without
+          changing it. Directions are relative to Karel, except compass sensors.
+          Beepers are shown as coins.
+        </p>
+        <div class="reference-grid">
+          <section>
+            <h3>Actions</h3>
+            <dl>
+              <dt><code>move();</code></dt>
+              <dd>One square forward; requires a clear path.</dd>
+              <dt><code>turnLeft();</code></dt>
+              <dd>Rotate 90° left on the same square.</dd>
+              <dt><code>pickBeeper();</code></dt>
+              <dd>Take one coin here; requires a coin.</dd>
+              <dt><code>putBeeper();</code></dt>
+              <dd>Place one coin here; requires a coin in the bag.</dd>
+            </dl>
+          </section>
+          <section>
+            <h3>Path sensors</h3>
+            <dl>
+              <dt><code>frontIsClear() / frontIsBlocked()</code></dt>
+              <dd>Accessible / blocked square ahead.</dd>
+              <dt><code>leftIsClear() / leftIsBlocked()</code></dt>
+              <dd>Accessible / blocked square to the left.</dd>
+              <dt><code>rightIsClear() / rightIsBlocked()</code></dt>
+              <dd>Accessible / blocked square to the right.</dd>
+            </dl>
+          </section>
+          <section>
+            <h3>Coin sensors</h3>
+            <dl>
+              <dt><code>beepersPresent() / noBeepersPresent()</code></dt>
+              <dd>Current square contains a coin / is empty.</dd>
+              <dt><code>beepersInBag() / noBeepersInBag()</code></dt>
+              <dd>Bag contains a coin / is empty.</dd>
+            </dl>
+          </section>
+          <section>
+            <h3>Direction sensors</h3>
+            <dl>
+              <dt><code>facingNorth() / notFacingNorth()</code></dt>
+              <dd>Facing / not facing north.</dd>
+              <dt><code>facingEast() / notFacingEast()</code></dt>
+              <dd>Facing / not facing east.</dd>
+              <dt><code>facingSouth() / notFacingSouth()</code></dt>
+              <dd>Facing / not facing south.</dd>
+              <dt><code>facingWest() / notFacingWest()</code></dt>
+              <dd>Facing / not facing west.</dd>
+            </dl>
+          </section>
+          <section>
+            <h3>Control flow</h3>
+            <dl>
+              <dt><code>if (condition) { ... } else { ... }</code></dt>
+              <dd>Select a branch; else is optional.</dd>
+              <dt><code>while (condition) { ... }</code></dt>
+              <dd>Check before each repetition; may run zero times.</dd>
+              <dt><code>for (int i = 0; i &lt; 4; i++) { ... }</code></dt>
+              <dd>
+                Fixed repetition; replace 4 with a nonnegative integer. The
+                counter cannot be used inside the loop.
+              </dd>
+              <dt><code>!frontIsClear()</code></dt>
+              <dd>NOT: true when the condition is false.</dd>
+              <dt><code>frontIsClear() &amp;&amp; !beepersPresent()</code></dt>
+              <dd>AND: both conditions must be true.</dd>
+              <dt><code>leftIsBlocked() || rightIsBlocked()</code></dt>
+              <dd>
+                OR: at least one condition must be true. Precedence: ! then
+                &amp;&amp; then ||. Parentheses group conditions.
+              </dd>
+            </dl>
+          </section>
+          <section>
+            <h3>Functions</h3>
+            <dl>
+              <dt><code>void helper() { ... }</code></dt>
+              <dd>
+                Define a function outside main and call it by name. The form
+                void helper(void) is also supported.
+              </dd>
+              <dt><code>int main(void) { ... }</code></dt>
+              <dd>
+                Program entry; int main() is also valid. Finishing main ends the
+                program. No return statement is needed or supported.
+              </dd>
+              <dt><code>helper();</code></dt>
+              <dd>
+                Functions can call themselves or each other recursively.
+                Recursion needs a terminating case.
+              </dd>
+            </dl>
+          </section>
+          <section>
+            <h3>Syntax and comments</h3>
+            <dl>
+              <dt><code>move();</code></dt>
+              <dd>End each action or function call with a semicolon.</dd>
+              <dt><code>{ ... }</code></dt>
+              <dd>
+                Braces are required around function, branch and loop bodies.
+                Blocks may be nested.
+              </dd>
+              <dt><code>// A line comment</code></dt>
+              <dd>Explain your code until the end of the line.</dd>
+              <dt><code>/* A block comment */</code></dt>
+              <dd>Explain your code across one or more lines.</dd>
+            </dl>
+          </section>
+        </div>
+        <p>
+          This teaching language supports commands, conditions and parameterless
+          functions. It does not support general variables, arithmetic,
+          parameters or return values. There is no break, continue, do/while or
+          switch. Conditions use the built-in sensors; custom predicate
+          functions are not supported.
+        </p>
+      </div>
+    </dialog>
     <dialog id="confirmation">
       <form method="dialog">
         <h2 id="confirmation-title"></h2>
