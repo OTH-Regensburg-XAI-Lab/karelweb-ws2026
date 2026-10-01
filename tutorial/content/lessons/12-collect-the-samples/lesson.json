@@ -25,7 +25,7 @@
   "requirements": ["while", "if-in-while"],
   "illustration": {
     "src": "images/concept.png",
-    "alt": "Inspect every square on the route, including corners and endpoints. Collect scattered samples and unload the complete bag at the depot.",
+    "alt": "Karel picks up a coin from the current square into the bag. At the depot, a while loop places coins from the bag onto the same square until the bag is empty.",
     "caption": "Inspect every square on the route, including corners and endpoints. Collect scattered samples and unload the complete bag at the depot.",
     "width": 1774,
     "height": 887
