@@ -36,7 +36,7 @@ existing GitHub Pages deployment.
 The actual delivery directory can also be tested from the source repository:
 
 ```sh
-node scripts/static-page-smoke.mjs /Users/snk/containers/karelweb-ws2026 without-world-editor
+node scripts/static-page-smoke.mjs /Users/someone/containers/karelweb-ws2026 without-world-editor
 ```
 
 The smoke test first compiles and executes the shipped `int main()` program.
