@@ -1,0 +1,107 @@
+#imprint-dialog,
+.imprint-page {
+  box-sizing: border-box;
+  width: min(36rem, calc(100% - 2rem));
+  padding: 1.5rem;
+  color: #17211b;
+  background: #fffef9;
+  border: 1px solid #ccd6ce;
+  border-radius: 16px;
+  font:
+    1rem/1.6 system-ui,
+    sans-serif;
+  overflow-wrap: anywhere;
+}
+#imprint-dialog {
+  max-width: none;
+  max-height: calc(100dvh - 2rem);
+  overflow-y: auto;
+  box-shadow: 0 16px 64px #17211b33;
+}
+#imprint-dialog:not([open]) {
+  display: none;
+}
+#imprint-dialog::backdrop {
+  background: #17211b80;
+}
+#imprint-dialog header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+#imprint-dialog h2,
+.imprint-page h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+#imprint-dialog form {
+  margin: 0;
+}
+#imprint-dialog button {
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-radius: 8px;
+  background: #176b4d;
+  color: white;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+#imprint-dialog button:hover {
+  background: #10533c;
+}
+.imprint-content address {
+  font-style: normal;
+}
+.imprint-content .imprint-links {
+  border-top: 1px solid #ccd6ce;
+  padding-top: 1rem;
+  padding-left: 0;
+  list-style: none;
+}
+.imprint-content ul {
+  padding-left: 1.25rem;
+  margin-bottom: 0;
+}
+.imprint-content li + li {
+  margin-top: 0.5rem;
+}
+.imprint-content a,
+.imprint-page > a {
+  color: #176b4d;
+  text-decoration: underline;
+}
+#imprint-dialog :focus-visible,
+.imprint-page :focus-visible {
+  outline: 3px solid #176b4d;
+  outline-offset: 3px;
+}
+.imprint-body {
+  margin: 0;
+  background: #f4f1e8;
+}
+.imprint-page {
+  margin: 2rem auto;
+}
+.imprint-page h1 {
+  margin: 1rem 0;
+}
+@media print {
+  .imprint-body {
+    background: white;
+  }
+  .imprint-page {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    max-height: none;
+    overflow: visible;
+  }
+  .imprint-page > a {
+    display: none;
+  }
+}

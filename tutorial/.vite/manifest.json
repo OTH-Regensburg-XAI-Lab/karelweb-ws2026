@@ -1,6 +1,6 @@
 {
   "../../packages/application/dist/local-execution-backend.js": {
-    "file": "assets/local-execution-backend-n8mGK-Gj.js",
+    "file": "assets/local-execution-backend-ibWNaAVy.js",
     "name": "local-execution-backend",
     "src": "../../packages/application/dist/local-execution-backend.js",
     "isDynamicEntry": true,
@@ -8,16 +8,23 @@
       "index.html"
     ]
   },
+  "_imprint-client-B_071Ujc.js": {
+    "file": "assets/imprint-client-B_071Ujc.js",
+    "name": "imprint-client"
+  },
   "index.html": {
-    "file": "assets/index-Dya1-N7F.js",
-    "name": "index",
+    "file": "assets/main-CbfYXKRy.js",
+    "name": "main",
     "src": "index.html",
     "isEntry": true,
+    "imports": [
+      "_imprint-client-B_071Ujc.js"
+    ],
     "dynamicImports": [
       "../../packages/application/dist/local-execution-backend.js"
     ],
     "css": [
-      "assets/index-u73VRsVG.css"
+      "assets/main-u73VRsVG.css"
     ]
   }
 }

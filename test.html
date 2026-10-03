@@ -6,14 +6,14 @@
     <meta
       name="description"
       id="page-description"
-      data-i18n-key="standalone.description"
-      content="Check and visually run C-like Base Karel programs."
+      data-i18n-key="testlab.description"
+      content="Create and try Karel worlds."
     />
-    <title data-i18n-key="app.title">Karel Studio</title>
-    <script type="module" crossorigin src="/karelweb-ws2026/assets/main-BrGCEiSr.js"></script>
+    <title data-i18n-key="testlab.title">Karel Studio · World Editor</title>
+    <script type="module" crossorigin src="/karelweb-ws2026/assets/test-OXVHp_j-.js"></script>
     <link rel="modulepreload" crossorigin href="/karelweb-ws2026/assets/imprint-client-B_071Ujc.js">
     <link rel="modulepreload" crossorigin href="/karelweb-ws2026/assets/dist-rCixQaNP.js">
-    <link rel="stylesheet" crossorigin href="/karelweb-ws2026/assets/main-ia0c-JxJ.css">
+    <link rel="stylesheet" crossorigin href="/karelweb-ws2026/assets/test-CSrn_IAv.css">
     <link rel="stylesheet" href="/karelweb-ws2026/imprint.css">
   </head>
   <body>
@@ -25,27 +25,16 @@
         <div class="header-copy">
           <a
             class="text-link"
-            id="world-editor-link"
-            href="/karelweb-ws2026/test.html"
-            data-i18n-key="standalone.openWorldEditor"
-            >World Editor</a
+            href="/karelweb-ws2026/"
+            data-i18n-key="testlab.backToEditor"
+            >Program</a
           >
         </div>
       </header>
-      <div class="world-import">
-        <button id="load-world" type="button" data-i18n-key="we.file.load">
-          Load world …
-        </button>
-        <input
-          id="world-file"
-          type="file"
-          accept=".json,application/json"
-          aria-label="Choose a world file"
-          hidden
-        />
-        <p id="world-import-status" role="status" aria-live="polite"></p>
-      </div>
-      <karel-runner name="answer"></karel-runner>
+      <karel-runner name="answer" test-mode></karel-runner>
+      <section class="world-editor-section" aria-label="World editor">
+        <karel-world-editor></karel-world-editor>
+      </section>
     </main>
     <footer class="site-footer">
   <p>2026 OTH Regensburg, Project ADKI, XAI Lab</p>
