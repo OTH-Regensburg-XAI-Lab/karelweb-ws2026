@@ -56,6 +56,10 @@
 .imprint-content address {
   font-style: normal;
 }
+.imprint-privacy {
+  margin-top: 1rem;
+  border-top: 1px solid #ccd6ce;
+}
 .imprint-content .imprint-links {
   border-top: 1px solid #ccd6ce;
   padding-top: 1rem;

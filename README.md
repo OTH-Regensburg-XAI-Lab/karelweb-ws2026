@@ -4,7 +4,9 @@ Static website: https://oth-regensburg-xai-lab.github.io/karelweb-ws2026/
 
 This repository publishes the standalone **program Editor and World Editor**, plus
 an independent fourteen-lesson tutorial. All three views use the same modal
-**Impressum**, generated from one source file in Karelweb. The linked names
+**Impressum / Privacy**, generated from one source file in Karelweb. The short
+privacy notice describes local browser processing/storage and GitHub Pages hosting.
+The linked names
 Prof. Dr. Stephan Scheele and Prof. Dr. Titus Dose appear directly below each other
 above OTH Regensburg and the shared address. No email is included.
 
@@ -22,15 +24,14 @@ above OTH Regensburg and the shared address. No email is included.
 ## Build provenance
 
 Built on 2026-10-03 from the Karelweb working tree on
-`codex/f-02-world-editor-ui`, based on source commit
-[`44330b8`](https://gitlab.oth-regensburg.de/IM/labor_kiti/adki/karelweb/-/commit/44330b8f8a98a1f02ec7a372216bfb815ca62584),
-including the uncommitted F-03 shared-imprint implementation and latest content
-revision. The owner explicitly requested building and publishing both applications
-and requested no further tests. Both production builds completed; no test suite
-was run for this publication.
+`codex/f-03-privacy-notice`, based on source commit
+[`bed0c37`](https://gitlab.oth-regensburg.de/IM/labor_kiti/adki/karelweb/-/commit/bed0c37305d64ba7b0e481697ca705ec06a587e3),
+including the uncommitted minimal privacy-notice follow-up. The owner explicitly
+requested building and pushing both applications, without tests. Both production
+builds completed; no test suite was run for this publication.
 
 Source snapshot SHA-256:
-`8dc3675093ad311867d262f97dff5c3c644df55bafe986985db7d06227a0796d`.
+`38b057666b3e587000e39f2918ae7f3f4bb53b73d9fe1cb047a879627c7f6021`.
 This covers 383 sorted tracked/nonignored files under `apps/shared`,
 `apps/standalone`, `apps/tutorial`, `packages`, plus `package.json`,
 `package-lock.json` and `tsconfig.base.json`; hash each relative path, NUL, bytes,
@@ -60,4 +61,6 @@ are restored unchanged; the language accepts `int main()` / `int main(void)`.
 A saved legacy `void main()` program needs a manual correction.
 
 A project license has not yet been selected. Third-party notices do not license
-Karel Studio's own code. The contact-only imprint does not include a privacy policy.
+Karel Studio's own code. The short technical privacy notice is not a certification
+of legal completeness;
+controller classification and applicable legal bases remain to be confirmed.
